@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// schema for houses
+// schema of house details
 let house = new Schema({
     houseType: {
         type: String,
@@ -31,3 +31,32 @@ let house = new Schema({
     },
     
 });
+
+// schema of user details
+let user = new Schema({
+    userID: {
+        type: String,
+        required: "user ID is required"
+    },
+    
+    userFirstName: {
+        type: String,
+        required: "User First name is required"
+    },
+
+    userLastName: {
+        type: String,
+        required: "User Last Name is required"
+    },
+
+    userEmailID: {
+        type: String,
+        unique: true,
+        required: 'Email address is required',
+        validate: [validateEmail, 'Please fill a valid email address'],
+        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
+    },
+
+
+    
+})
