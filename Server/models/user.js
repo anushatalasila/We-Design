@@ -9,10 +9,20 @@ var validateEmail = function(userEmailID) {
 // schema of user details
 let user = new Schema({
     userID: {
-        type: String,
+        type: Number,
+        unique:true,//sets the field as uniques throughout
         required: "user ID is required"
     },
-    
+    username: {
+        type: String,
+        unique : true,  //sets the field as uniques throughout
+        required: 'Username cannot be empty'
+    },
+    password: {
+        type: String,
+        required: 'Password cannot be empty',
+        minlength : [6,'Password must be atleast 6 character long']
+    },
     userFirstName: {
         type: String,
         required: "User First name is required"
