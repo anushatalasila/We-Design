@@ -1,6 +1,11 @@
 'use strict';
 
-const weModelroute = require('./routes');
+const userRoute = require('./user-routes');
 module.exports = (app) => {
-    weModelroute(app);
+    userRoute(app);
+};
+
+const houseRoute = require('./house-routes');
+module.exports = (app) => {
+    houseRoute(app);
 };

@@ -32,7 +32,7 @@ exports.list = (request, response) => {
 */
 exports.save = (request, response) => {
     const house = Object.assign({}, request.body);
-    const result = (saved) => {
+    const result = (savedHouse) => {
         response.status(201);
         response.json(savedHouse);
     };
@@ -91,7 +91,7 @@ exports.delete = (request, response) => {
     const result = () => {
         response.status(200);
         response.json({
-            message: "User Successfully Deleted."
+            message: "House Successfully Deleted."
         });
     };
     const promise = houseService.delete(houseId);
