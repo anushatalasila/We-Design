@@ -21,25 +21,8 @@ let user = new Schema({
     password: {
         type: String,
         required: 'Password cannot be empty',
-        minlength : [6,'Password must be atleast 6 character long']
-    },
-    userFirstName: {
-        type: String,
-        required: "User First name is required"
-    },
-
-    userLastName: {
-        type: String,
-        required: "User Last Name is required"
-    },
-
-    userEmailID: {
-        type: String,
-        unique: true,
-        required: "Email address is required",
-        validate: [validateEmail, 'Please fill a valid email address'],
-        match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
-    },
+        minlength: [6, 'Password must be atleast 6 character long']
+    } 
 });
 
 module.exports = mongoose.model('user', user);

@@ -28,7 +28,7 @@ exports.save = (user) => {
  * @param userId
 */
 exports.get = (userId) => {
-    const userPromise = Todo.findById(userId).exec();
+    const userPromise = User.findById(userId).exec();
     return userPromise;
 };
 
