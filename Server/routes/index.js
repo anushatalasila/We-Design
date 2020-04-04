@@ -1,3 +1,6 @@
 'use strict';
 
-const weModel = require('./user');
+const weModelroute = require('./routes');
+module.exports = (app) => {
+    weModelroute(app);
+};

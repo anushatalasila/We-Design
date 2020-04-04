@@ -1,6 +1,6 @@
 'use strict';
 
-const userService = require('../services/user-service');
+const userService = require('../services/service');
 
 /**
  * Sets response for user search.

@@ -5,7 +5,7 @@ let express = require('express'),
     bodyParser = require('body-parser');
 
 // mongoose instance connection url connection
-mongoose.connect('mongodb://localhost:27017/todo', {});
+mongoose.connect('mongodb://localhost:27017/user', {});
 
 mongoose.Promise = global.Promise;
 
@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 
 
-const initApp = require('./app/app');
+const initApp = require('./app');
 initApp(app);
 
 app.listen(port);
