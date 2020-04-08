@@ -9,3 +9,8 @@ const houseRoute = require('./house-routes');
 module.exports = (app) => {
     houseRoute(app);
 };
+
+const houseRoute = require('./favorite-routes');
+module.exports = (app) => {
+    houseRoute(app);
+};
