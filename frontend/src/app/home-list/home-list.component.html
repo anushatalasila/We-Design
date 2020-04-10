@@ -12,36 +12,18 @@
     <div class="grid-item"> 
         
 
-        <agm-map
-        [latitude]="latitude"
-        [longitude]="longitude"
-        [zoom]="2"
-        (mapClick)="addMarker($event.coords.lat, $event.coords.lng)"
-      >
-        <agm-marker
-          *ngFor="let marker of markers"
-          [latitude]="marker.lat"
-          [longitude]="marker.lng"
-          [opacity]="marker.alpha"
-          [markerDraggable]="true"
-          (markerClick)="selectMarker($event)"
-        >
-        </agm-marker>
-        <agm-rectangle
-          [north]="max('lat')"
-          [east]="max('lng')"
-          [south]="min('lat')"
-          [west]="min('lng')"
-        >
-        </agm-rectangle>
+        <label>Enter address</label>
+        <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+      &nbsp;
+    <div>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+          (dragEnd)="markerDragEnd($event)"></agm-marker>
       </agm-map>
-      <p *ngIf="selectedMarker">
-        Lat: {{ selectedMarker.lat }} Lng: {{ selectedMarker.lng }}
-      </p>
-
-
-
     </div>
+    </div>
+
+    
      <div class="grid-item-2">
         <p>   Rental listings
     </p>
