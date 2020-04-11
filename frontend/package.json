@@ -32,7 +32,12 @@
     "@types/googlemaps": "^3.39.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+<<<<<<< HEAD
+    "@types/angular": "1.6.5",
+    "@types/jquery": "2.0.40",
+=======
     "@types/node": "^12.11.1",
+>>>>>>> 3721bad9ce5a922dee56986dd025edc1dd5e3e0e
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
