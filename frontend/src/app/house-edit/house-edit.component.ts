@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-house-edit',
   templateUrl: './house-edit.component.html',
-  styleUrls: ['./house-edit.component.css']
+  styleUrls: ['./house-edit.component.scss']
 })
 export class HouseEditComponent implements OnInit {
 
