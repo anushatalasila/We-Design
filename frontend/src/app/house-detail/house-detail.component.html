@@ -1,0 +1,10 @@
+<div *ngIf="house" class="houses">
+    <h2>{{house.prod_name | uppercase}} Details</h2>
+    <div><span>Description: </span>{{house.Description}}</div>
+  
+    <div>
+      <button routerLink="/house-edit/{{house._id}}">
+        Edit
+      </button>
+    </div>
+  </div>

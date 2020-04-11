@@ -1,0 +1,17 @@
+<h2>House List</h2>
+
+<div>
+  <button (click)="add()">
+    Add
+  </button>
+</div>
+
+<ul class="houses">
+  <li *ngFor="let h of houses; let i=index;">
+    <a routerLink="/house-details/{{h._id}}">
+      <span class="badge">{{i+1}}</span> {{h.description}}
+    </a>
+    <button class="delete" title="delete house"
+      (click)="delete(h._id)">x</button>
+  </li>
+</ul>
