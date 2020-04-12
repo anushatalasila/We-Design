@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "webdesign"
+    }
+  },
+  "defaultProject": "webdesign",
+  "cli": {
+    "analytics": false
+  }
 }
