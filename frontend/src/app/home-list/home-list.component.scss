@@ -1,0 +1,65 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+  }
+  
+  li {
+    float: right    ;
+  }
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    color: blue;
+  }
+ 
+  div{
+      border-bottom: black;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto ;
+    
+    
+    
+  }
+  .grid-item {
+   
+    
+    height:640px;
+    
+  }
+  .grid-item-2 {
+   
+   
+    height:640px;
+    overflow: auto;
+  }
+  .card {
+    box-shadow: 8px 4px 8px 8px rgba(0, 0, 0, 0.2);
+    max-width: 780px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  p{
+      margin-left: 10px;
+  }
+
+  agm-map { height: 600px;}
+  input {
+    width: 99%;
+    height: 50px;
+  }
